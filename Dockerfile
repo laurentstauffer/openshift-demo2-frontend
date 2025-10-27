@@ -18,8 +18,8 @@ RUN npm run build
 # Étape 2: Servir avec Nginx
 FROM nginx:alpine
 
-# Copier la configuration nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copier la configuration nginx principale
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copier les fichiers buildés depuis l'étape précédente
 COPY --from=build /app/dist/frontend/browser /usr/share/nginx/html

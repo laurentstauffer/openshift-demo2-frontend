@@ -24,8 +24,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copier les fichiers buildés depuis l'étape précédente
 COPY --from=build /app/dist/frontend/browser /usr/share/nginx/html
 
-# Exposer le port 80 
-EXPOSE 80
+# Exposer le port 8080 (OpenShift n'autorise pas les ports < 1024)
+EXPOSE 8080
 
 # Démarrer nginx
 CMD ["nginx", "-g", "daemon off;"]

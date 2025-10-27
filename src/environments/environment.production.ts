@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: '/api'  // Chemin relatif pour OpenShift (nécessite un reverse proxy comme nginx)
+  apiUrl: ''  // Vide car nginx ajoute déjà /api/ dans la configuration du proxy
 };

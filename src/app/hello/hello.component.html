@@ -1,0 +1,8 @@
+<div class="hello-container">
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <div *ngIf="!loading && !error" class="message">
+    <h2>Message from API:</h2>
+    <p>{{ message }}</p>
+  </div>
+</div>
